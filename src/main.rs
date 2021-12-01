@@ -6,8 +6,10 @@ fn main() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1..101);
+    let mut attempts :u32 = 1;
 
     loop {
+        println!("\t\t\tAttempt №{}", attempts);
         println!("Input your guess:");
 
         let mut guess = String::new();
@@ -30,5 +32,7 @@ fn main() {
                 break;
             }
         }
+
+        attempts += 1;
     }
 }
