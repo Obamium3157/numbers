@@ -56,6 +56,7 @@ pub fn limited(secret_number: u32) {
     loop {
         if attempts == 10 {
             println!("You lose!");
+            println!("The answer was: {}", secret_number);
             break;
         }
         println!("\t\t\tAttempt №{}", attempts);
@@ -92,6 +93,7 @@ pub fn vanga(secret_number: u32) {
     loop {
         if attempts == 2 {
             println!("You lose!");
+            println!("The answer was: {}", secret_number);
             break;
         }
         println!("\t\t\tAttempt №{}", attempts);
