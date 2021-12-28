@@ -54,7 +54,7 @@ pub fn limited(secret_number: u32) {
     let mut attempts: u16 = 1;
 
     loop {
-        if attempts == 15 {
+        if attempts == 10 {
             println!("You lose!");
             break;
         }
