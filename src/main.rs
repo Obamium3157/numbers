@@ -1,11 +1,14 @@
-use std::io;
+use std::{ io, env };
 use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
     println!("Guess the number!");
+    let args: Vec<String> = env::args().collect();
 
-    let secret_number = rand::thread_rng().gen_range(1..101);
+    let max = &args[1].trim().parse().expect("Error");
+
+    let secret_number = rand::thread_rng().gen_range(1..*max);
     let mut attempts :u32 = 1;
 
     loop {
