@@ -1,5 +1,4 @@
-use std::{ io, env };
-use std::cmp::Ordering;
+use std::env;
 use rand::Rng;
 use RustProject::{limited, Modes, normal, vanga};
 
