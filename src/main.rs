@@ -1,6 +1,6 @@
 use std::env;
 use rand::Rng;
-use RustProject::{limited, Modes, normal, vanga};
+use numbers::{limited, Modes, normal, vanga};
 
 fn main() {
     println!("Guess the number!");
