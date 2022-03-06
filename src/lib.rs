@@ -18,6 +18,14 @@ impl Modes {
     }
 }
 
+pub fn select_mode(mode: Modes, secret_number: u32) {
+    match mode {
+        Modes::NORMAL => normal(secret_number),
+        Modes::LIMITED => limited(secret_number),
+        Modes::VANGA => vanga(secret_number),
+    }
+}
+
 pub fn normal(secret_number: u32) {
     let mut attempts: u16 = 1;
 

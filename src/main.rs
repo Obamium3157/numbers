@@ -1,6 +1,6 @@
 use std::env;
 use rand::Rng;
-use numbers::{limited, Modes, normal, vanga};
+use numbers::{ Modes, select_mode };
 
 fn main() {
     println!("Guess the number!");
@@ -12,9 +12,5 @@ fn main() {
 
     let mode = Modes::new(&args[2]);
 
-    match mode {
-        Modes::NORMAL => normal(secret_number),
-        Modes::LIMITED => limited(secret_number),
-        Modes::VANGA => vanga(secret_number),
-    }
+    select_mode(mode, secret_number);
 }
